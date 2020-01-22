@@ -25,13 +25,18 @@ class igbot:
 		time.sleep(uniform(3,5))
 		#Now we are in the IG homepage, let's move around
 
-	#def randomise(self):
-	#	state = randint(0,5)
-	#	if state == 0:
-	#		self.driver.get('https://www.instagram.com/'+ user +'/')
+	def randomise(self):
+		self.driver.find_element_by_xpath('/html/body/div[1]/section/main/section/div[3]/div[2]/div[2]/div/div/div/div[1]/button/div[1]').click()
+		for i in range(0,100):
+			time.sleep(uniform(3,25))
+			self.driver.find_element_by_xpath('/html/body/div[1]/section/div/div/section/div[2]/button[2]/div').click()
+			
+		self.driver.close()
+
+
 
 	def newfollow(self):
-		hashtag_list = ['travel','art','london','cerrone','pictures','flat','design']
+		hashtag_list = ['marlboro','NewYork','weed','porn','sick','trap']
 		#prev_user_list = [] first run only, and comment 2 lines below
 		prev_user_list= pd.read_csv('20200122_users_followed_list.csv',delimiter=',').iloc[:,1:2]
 		prev_user_list = list(prev_user_list['0'])
@@ -75,7 +80,7 @@ class igbot:
 							followed+=1
 						time.sleep(uniform(0,3))
 
-						if randint(0,100) > 70:
+						if randint(0,100) > 120:
 							time.sleep(uniform(2,5))
 							self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea').click()
 							self.comment_box = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea')
@@ -115,7 +120,7 @@ class igbot:
 							print(username + ' Liked correctly AF')
 							time.sleep(uniform(0.5,2))
 
-						if randint(0,100) < 30:
+						if randint(0,100) > 120:
 							time.sleep(uniform(1,3))
 							self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea').click()
 							self.comment_box = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea')
@@ -144,4 +149,4 @@ class igbot:
 		print('Followed {} new people.'.format(followed))
 		print('supmate')
 
-igbot(account[1], password[1]).newfollow()
+igbot(account[1], password[1]).randomise()
