@@ -1,3 +1,3 @@
 # InstagramBot
 ---
-# 10 minutes installment 
+# 10 minutes setup process 
