@@ -9,7 +9,7 @@
 2. Install Python [Python Download](https://www.python.org/downloads/)
 	
 3. Open a Prompt command / Terminal in in the ig_bot folder ([How to?](https://www.groovypost.com/howto/open-command-window-terminal-window-specific-folder-windows-mac-linux/))
-	* Type in "python -m pip install selenium" and hit ENTER key
+	* Type in 'python -m pip install selenium' and hit ENTER key
 
 4. Download ig_bot.py and secret.py from this repostiory and move them to ig_bot folder
 
@@ -17,3 +17,13 @@
 
 ----
  
+First of all open secret.py and write in your user and password, save and close the file. Now open ig_bot.py file and at line 13 write in the brackets your path down to chromedriver, it should look like 'self.driver=webdriver.Chrome("/User/Desktop/Bots/ig_bot/chromedriver")'.
+
+
+Now you are ready to your firs run, you can set the target hashtags by modifying and even extending the hashtag_list at line 39.  
+To run the code just open the Prompt command in ig_bot folder by simply repeating the third step of the setup process but this time type in: 'Python ig_bot.py' and hit ENTER key.
+
+
+After the first run, if you want to update the user followed log after every run, go to line 40:
+
+As explained in line 41, put an hash symbol '#' at the beginning of line 40 ('#' stands for comment, the line following this symbol will not be considered during the script run) and erase the hash symbol at line 42 and 43.

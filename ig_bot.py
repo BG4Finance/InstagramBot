@@ -10,7 +10,7 @@ account = name
 password = pw
 class igbot:
 	def __init__(self, user, pw):
-		self.driver=webdriver.Chrome("/Users/Barbarossa/Desktop/Prog/ig_bot/chromedriver")
+		self.driver=webdriver.Chrome("YOUR UNIQUE PATH TO ig_bot FOLDER/chromedriver")
 		time.sleep(1)
 		self.driver.get('https://www.instagram.com/accounts/login/')
 		self.user = user
@@ -30,23 +30,24 @@ class igbot:
 		for i in range(0,100):
 			time.sleep(uniform(3,25))
 			self.driver.find_element_by_xpath('/html/body/div[1]/section/div/div/section/div[2]/button[2]/div').click()
-			
+
 		self.driver.close()
 
 
 
 	def newfollow(self):
-		hashtag_list = ['marlboro','NewYork','weed','porn','sick','trap']
-		#prev_user_list = [] first run only, and comment 2 lines below
-		prev_user_list= pd.read_csv('20200122_users_followed_list.csv',delimiter=',').iloc[:,1:2]
-		prev_user_list = list(prev_user_list['0'])
+		hashtag_list = ['travel','NewYork','weed','porn','sick','trap']
+		prev_user_list = []
+		#After the first run comment line 40 and uncomment the following two lines 42 and 43
+		#prev_user_list= pd.read_csv('20200122_users_followed_list.csv',delimiter=',').iloc[:,1:2]
+		#prev_user_list = list(prev_user_list['0'])
 		new_followed = []
 		tag = 0
 		followed = 0
 		likes = 0
 		comments = 0
 		#7 Comments
-		comm = ['Wow, amazing!',"Aaahw, that's something", "Damn!", "Looove it!", "Hey where u from?","Yoooo", "That's something else..."]
+		comm = ['Wow, amazing!',"That's something", "Damn!", "Looove it!", "Hey where u from?", "Yoooo", "That's something else..."]
 
 		for tag in hashtag_list:
 			self.driver.get('https://www.instagram.com/explore/tags/'+ tag + '/')
@@ -149,4 +150,4 @@ class igbot:
 		print('Followed {} new people.'.format(followed))
 		print('supmate')
 
-igbot(account[1], password[1]).randomise()
+igbot(account[1], password[1]).newfollow()
