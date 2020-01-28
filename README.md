@@ -1,7 +1,7 @@
 # InstagramBot
 
 
-### 10 minutes easy setup process 
+### 5 minutes easy setup process 
 1. Install Google Chrome & Download ChromeDriver Binary
 	* Install [Google Chrome](https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en)(leave it in deafult path)
 	* Download [ChromeDriver Binary](https://sites.google.com/a/chromium.org/chromedriver/getting-started) and place the file in a dedicated folder (let's call it ig_bot folder)
