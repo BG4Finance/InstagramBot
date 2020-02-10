@@ -81,7 +81,7 @@ class igbot:
 							followed+=1
 						time.sleep(uniform(0,3))
 
-						if randint(0,100) > 120:
+						if randint(0,100) > 85:
 							time.sleep(uniform(2,5))
 							self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea').click()
 							self.comment_box = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea')
@@ -121,7 +121,7 @@ class igbot:
 							print(username + ' Liked correctly AF')
 							time.sleep(uniform(0.5,2))
 
-						if randint(0,100) > 120:
+						if randint(0,100) > 90:
 							time.sleep(uniform(1,3))
 							self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea').click()
 							self.comment_box = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea')
