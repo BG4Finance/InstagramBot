@@ -52,6 +52,7 @@ class igbot:
 		except FileNotFoundError as e:
 			file_status = 'missing'
 			self.following_list = []
+			print('New User Onboarding')
 		new_followed = []
 		tag = 0
 		followed = 0
