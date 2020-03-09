@@ -76,7 +76,7 @@ class igbot:
 					username = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/header/div[2]/div[1]/div[1]/a').text
 					#Interactions start here!
 					#Should I comment?
-					if randint(0,100) > 45:
+					if randint(0,100) > 70:
 						time.sleep(uniform(2,5))
 						self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div[1]/form/textarea').click()
 						self.comment_box = self.driver.find_element_by_xpath('/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div[1]/form/textarea')
@@ -93,7 +93,7 @@ class igbot:
 						time.sleep(uniform(1,3))
 
 					#Should I like?
-					if randint(0,100) > 99:
+					if randint(0,100) > 65:
 						time.sleep(uniform(0.5,2))
 						self.driver.find_element_by_css_selector('body > div._2dDPU.CkGkG > div.zZYga > div > article > div.eo2As > section.ltpMr.Slqrh > span.fr66n > button > svg').click()
 						#time.sleep(1)
@@ -163,5 +163,5 @@ class igbot:
 				time.sleep(0.5)
 				self.driver.find_element_by_xpath('/html/body/div[5]/div/div/div[3]/button[1]').click()
 
-hashtag_list = ['art','skateboard','tonyhawk', 'wall', 'design', 'board']
+hashtag_list = ['skateboard','tonyhawk', 'wall', 'design', 'board']
 igbot(account[ale], password[ale]).newfollow(hashtag_list)
